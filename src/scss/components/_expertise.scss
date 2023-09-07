@@ -1,0 +1,80 @@
+.container {
+    &-expertise {
+        padding-block: 60px !important;
+        flex-direction: column !important;
+
+        @include respondsive(md) {
+            padding-block: 30px !important;
+        }
+        .expertise {
+            &-title {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 24px 24px 24px;
+
+                @include respondsive(sm) {
+                    padding: 0 16px 16px 16px;
+                    flex-direction: column;
+                }
+                .title {
+                    &-content {
+                        &-display {
+                            color: $dark-gray;
+                        }
+                    }
+                }
+            }
+            &-card {
+                display: flex;
+                @include respondsive(xl) {
+                    gap: 20px;
+                    flex-wrap: wrap;
+                }
+                .card {
+                    padding: 40px;
+                    transition: all 300ms ease;
+                    &-content {
+                        &-img {
+                            max-width: 86px;
+                            margin-block: 40px;
+                            path {
+                                fill: $white;
+                                transition: all 200ms ease;
+                            }
+                        }
+                        &-paragraph {
+                            color: #9f9f9f;
+                            font-size: $p;
+                            font-weight: 300;
+                            line-height: $lh-desc;
+                            max-width: 269px;
+                        }
+                    }
+                    .btn-link {
+                        opacity: 0;
+                    }
+                    &:hover {
+                        background-color: #19242c;
+                        .card {
+                            &-content {
+                                &-img {
+                                    path {
+                                        fill: #ff5b2c !important;
+                                    }
+                                }
+                            }
+                        }
+                        .btn-link {
+                            opacity: 1;
+                        }
+                    }
+                }
+                .wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

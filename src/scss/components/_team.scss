@@ -1,0 +1,94 @@
+.container {
+    &-team {
+        flex-direction: column !important;
+        padding-block: 60px !important;
+
+        @include respondsive(md) {
+            padding-block: 30px !important;
+        }
+        .team {
+            &-title {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 24px 24px 24px;
+
+                @include respondsive(md) {
+                    padding: 0 16px 16px 16px;
+                    flex-direction: column;
+                }
+                .title {
+                    &-content {
+                        &-display {
+                            max-width: 559px;
+                            text-transform: uppercase;
+
+                            @include respondsive(sm) {
+                                max-width: 100%;
+                                font-size: 2.5em;
+                            }
+                        }
+                        &-icon {
+                            max-width: 48px;
+
+                            @include respondsive(md) {
+                                max-width: 32px;
+                            }
+                            @include respondsive(md) {
+                                display: none;
+                            }
+                        }
+                        &-subtext {
+                            max-width: 359px;
+                            color: $gray;
+
+                            @include respondsive(md) {
+                                max-width: 70%;
+                            }
+                            @include respondsive(sm) {
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+                .wrapper {
+                    display: flex !important;
+                    align-items: flex-start;
+                    gap: 24px;
+                }
+            }
+            &-card {
+                display: flex;
+                gap: 24px;
+                overflow-x: auto;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                .card {
+                    width: 373px;
+                    flex-shrink: 0;
+
+                    @include respondsive(md) {
+                        max-width: 352px;
+                    }
+                    @include respondsive(sm) {
+                        max-width: 332px;
+                    }
+                    &-content {
+                        &-display {
+                            color: $white;
+                        }
+                        &-paragraph {
+                            color: #9f9f9f;
+                            font-size: $p;
+                        }
+                    }
+                    .wrapper {
+                        margin-top: 16px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.btn {
+    background-color: transparent;
+    border: unset;
+    font-family: $font-body;
+    font-weight: 400;
+    font-size: $p-md;
+    color: $white;
+    line-height: 140%;
+    transition: all 300ms ease;
+    // &-secondary{
+    //     background-color: $secondary;
+    //     color: $white;
+    //     padding: 18px 36px;
+    // }
+    // &-primary{
+    //     @extend .btn-secondary;
+    //     background-color: $primary;
+    // }
+    &-link {
+        display: inline-flex;
+        align-items: center;
+        color: $gray;
+        gap: 8px;
+
+        .ic-arrow {
+            max-width: 24px;
+            width: 100%;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

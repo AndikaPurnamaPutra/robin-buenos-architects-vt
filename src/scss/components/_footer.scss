@@ -1,0 +1,143 @@
+.footer {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &-container {
+        @extend .footer;
+        max-width: 1440px;
+        flex-direction: column !important;
+        margin: 0 32px;
+        border-radius: 54px;
+        padding: 56px 56px;
+        position: relative;
+        background-image: url("/assets/image/Registered-symbol-background.svg");
+        background-repeat: no-repeat;
+        background-position: top -64px right -180px;
+        background-size: 741px;
+
+        @include respondsive(xl) {
+            background-position: top -54px right -176px;
+            background-size: 710px;
+            padding: 36px 36px;
+        }
+        @include respondsive(sm) {
+            background-position: top -54px right -122px;
+            background-size: 408px;
+            padding: 26px 26px;
+            border-radius: 32px;
+        }
+        .footer {
+            &-title {
+                .title {
+                    &-content {
+                        &-display {
+                            max-width: 1006px;
+                            margin-bottom: 16px;
+                            text-transform: uppercase;
+                            .decoration {
+                                &-text {
+                                    max-width: 71px;
+                                    margin-bottom: -8px;
+                                }
+                            }
+                            @include respondsive(xl) {
+                                font-size: 4.5em !important;
+                                .decoration {
+                                    &-text {
+                                        max-width: 68px;
+                                    }
+                                }
+                            }
+                            @include respondsive(sm) {
+                                font-size: 2.5em !important;
+                                .decoration {
+                                    &-text {
+                                        max-width: 36px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .wrapper {
+                    display: flex;
+                    align-items: center;
+                    gap: 70px;
+                    .title {
+                        &-content {
+                            &-subtext {
+                                color: $gray;
+                                max-width: 359px;
+
+                                @include respondsive(sm) {
+                                    max-width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    @include respondsive(xl) {
+                        gap: 40px;
+                    }
+                    @include respondsive(sm) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 16px;
+                    }
+                    .btn-outline {
+                        img {
+                            max-width: 217px;
+
+                            @include respondsive(xl) {
+                                max-width: 146px;
+                            }
+                        }
+                    }
+                }
+                &.office {
+                    .title {
+                        &-content {
+                            &-subtext {
+                                color: $gray;
+                                border-block: 1px solid;
+                                border-color: rgba($color: $white, $alpha: 0.1);
+                                padding-block: 56px;
+                                margin-block: 56px;
+                                text-transform: uppercase;
+                                span {
+                                    color: #ff5b2c;
+                                }
+
+                                @include respondsive(sm) {
+                                    padding-block: 36px;
+                                    margin-block: 36px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .copyright {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            &-mark,
+            .term,
+            .privacy {
+                font-family: $font-body;
+                font-size: $p-md;
+                color: $dark-gray;
+                transition: all 300ms ease;
+            }
+            .term,
+            .privacy {
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

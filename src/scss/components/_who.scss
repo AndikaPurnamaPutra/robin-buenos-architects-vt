@@ -1,0 +1,90 @@
+.container {
+    &-who {
+        padding-block: 60px !important;
+        position: relative !important;
+
+        @include respondsive(md) {
+            padding-block: 30px !important;
+        }
+        .who {
+            &-title {
+                text-align: center;
+                .title {
+                    &-content {
+                        &-subtext {
+                            color: $dark-gray;
+                            margin-bottom: 24px;
+
+                            @include respondsive(md) {
+                                margin-bottom: 16px;
+                            }
+                            @include respondsive(sm) {
+                                margin-bottom: 12px;
+                            }
+                        }
+                        &-display {
+                            font-family: $font-body;
+                            font-weight: 400;
+                            position: relative;
+                            .display {
+                                &-decoration {
+                                    position: absolute;
+                                    bottom: 0;
+                                    max-width: 68px;
+                                    margin-left: 16px;
+                                }
+                            }
+                            @include respondsive(xl) {
+                                font-size: 3.5em;
+                                .display {
+                                    &-decoration {
+                                        max-width: 58px;
+                                        margin-left: 14px;
+                                    }
+                                }
+                            }
+
+                            @include respondsive(md) {
+                                font-size: 2.5em;
+                                .display {
+                                    &-decoration {
+                                        max-width: 42px;
+                                        margin-left: 8px;
+                                    }
+                                }
+                            }
+                            @include respondsive(sm) {
+                                font-size: 1.5em;
+                                .display {
+                                    &-decoration {
+                                        max-width: 24px;
+                                        margin-left: 4px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &-image {
+                position: absolute;
+                top: 10px;
+                left: 282.5px;
+                max-width: 244px;
+                z-index: -1;
+
+                @include respondsive(xl) {
+                    left: 188.5px;
+                    max-width: 224px;
+                }
+                @include respondsive(md) {
+                    left: 116.5px;
+                    max-width: 186px;
+                }
+                @include respondsive(sm) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

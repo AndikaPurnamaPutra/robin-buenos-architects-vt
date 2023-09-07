@@ -1,0 +1,155 @@
+.container {
+    &-header {
+        padding-block: 60px !important;
+        flex-direction: column !important;
+
+        @include respondsive(md) {
+            padding-block: 30px !important;
+        }
+        .header {
+            &-content {
+                position: relative;
+
+                &-display {
+                    font-family: $font-display;
+                    font-size: 131px;
+                    margin-inline: unset;
+                    text-transform: uppercase;
+
+                    .decoration {
+                        &-left {
+                            position: relative;
+                            z-index: 1;
+                            max-width: 114px;
+                            margin: 0 -42px -14px -42px;
+                        }
+                    }
+
+                    @include respondsive(xl) {
+                        font-size: 100px;
+
+                        .decoration {
+                            &-left {
+                                max-width: 68px;
+                                margin: 0 -34px 0px -34px;
+                            }
+                        }
+                    }
+
+                    @include respondsive(md) {
+                        font-size: 78px;
+                        .decoration {
+                            &-left {
+                                max-width: 52px;
+                                margin: 0 -26px 0px -26px;
+                            }
+                        }
+                    }
+
+                    @include respondsive(sm) {
+                        font-size: 48px;
+                        text-align: center;
+                        .decoration {
+                            &-left {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &-subtext {
+                    max-width: 159px;
+                    font-family: $font-body;
+                    color: $light-gray;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 150%;
+
+                    @include respondsive(md) {
+                        max-width: 100%;
+                    }
+                }
+
+                .wrapper {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 40px;
+                    &-top {
+                        gap: 30px;
+                    }
+                    .decoration {
+                        &-right {
+                            max-width: 134px;
+                            animation: rotation 10s infinite linear;
+
+                            @keyframes rotation {
+                                from {
+                                    transform: rotate(0deg);
+                                }
+                                to {
+                                    transform: rotate(360deg);
+                                }
+                            }
+
+                            @include respondsive(md) {
+                                display: none;
+                            }
+                        }
+                        &-bottom {
+                            max-width: 217px;
+                        }
+                    }
+
+                    @include respondsive(xl) {
+                        .decoration {
+                            &-right {
+                                max-width: 100px;
+                            }
+
+                            &-bottom {
+                                max-width: 146px;
+                            }
+                        }
+                    }
+
+                    @include respondsive(md) {
+                        flex-wrap: wrap;
+                        gap: 16px;
+                        .decoration {
+                            &-right {
+                                display: none;
+                            }
+                            &-bottom {
+                                max-width: 138px;
+                            }
+                        }
+                    }
+
+                    @include respondsive(sm) {
+                        gap: 0;
+                        text-align: center;
+                        .decoration {
+                            &-bottom {
+                               display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-image {
+                margin-top: -60px;
+                z-index: 1;
+
+                @include respondsive(xl) {
+                    margin-top: -48px;
+                }
+
+                @include respondsive(md) {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

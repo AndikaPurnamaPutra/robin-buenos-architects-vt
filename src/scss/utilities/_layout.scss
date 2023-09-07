@@ -1,0 +1,41 @@
+// loop grid
+$grid-columns: 12;
+
+@for $i from 1 through $grid-columns {
+    .grid-#{$i} {
+        width: percentage($i / $grid-columns);
+    }
+}
+// example to html
+// .grid-6 for 50%
+// .grid-12 for 100%
+[class^="grid-"] {
+    @include respondsive(md) {
+        width: 100%;
+    }
+}
+
+.bg-dark {
+    background-color: #000000;
+}
+.bg-dark-light {
+    background-color: #19242c;
+}
+
+// layout for display
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .container {
+        width: 100%;
+        max-width: 1440px;
+        padding: 0 32px;
+        display: flex;
+        flex-direction: row;
+        @include respondsive(md) {
+            padding: 0 20px;
+            flex-direction: column;
+        }
+    }
+}

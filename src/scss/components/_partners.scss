@@ -1,0 +1,39 @@
+.container {
+    &-partner {
+        padding-block: 60px !important;
+
+        @include respondsive(md) {
+            padding-block: 30px !important;
+        }
+        .partner {
+            &-sponsore {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
+                &-item {
+                    :nth-child(1) {
+                        max-width: 239.77px;
+                    }
+                    :nth-child(2) {
+                        max-width: 116px;
+                    }
+                    :nth-child(3) {
+                        max-width: 140px;
+                    }
+                    :nth-child(4) {
+                        max-width: 254px;
+                    }
+                    :nth-child(5) {
+                        max-width: 202px;
+                    }
+                }
+
+                @include respondsive(xl) {
+                    flex-wrap: wrap;
+                    gap: 30px;
+                }
+            }
+        }
+    }
+}

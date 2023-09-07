@@ -1,0 +1,162 @@
+.container {
+    &-project {
+        padding-block: 60px !important;
+        flex-direction: column !important;
+
+        @include respondsive(md) {
+            padding-block: 30px !important; 
+        }
+        .project {
+            &-title {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 24px 24px 24px;
+
+                @include respondsive(sm) {
+                    flex-direction: column;
+                    padding: 0 16px 16px 16px;
+                }
+                .title {
+                    &-content {
+                        &-display {
+                            color: $dark-gray;
+                        }
+                    }
+                }
+            }
+            &-card {
+                display: flex;
+                overflow-x: auto;
+                gap: 16px;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                .card {
+                    position: relative;
+                    flex-shrink: 0;
+                    // max-width: 610px;
+                    &-background {
+                        &-image {
+                            max-width: 610px;
+                            border-radius: 64px;
+
+                            @include respondsive(xl) {
+                                max-width: 470px;
+                                border-radius: 44px;
+                            }
+                            @include respondsive(md) {
+                                max-width: 448px;
+                                border-radius: 32px;
+                            }
+                            @include respondsive(sm) {
+                                max-width: 332px;
+                            }
+                        }
+                    }
+                    &-content {
+                        width: 100%;
+                        padding: 32px 32px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        @include respondsive(xl) {
+                            padding: 28px 28px;
+                        }
+                        @include respondsive(xl) {
+                            padding: 24px 24px;
+                        }
+                        &-image {
+                            max-width: 126px;
+                            animation: rotation 10s infinite linear;
+
+                            @include respondsive(xl) {
+                                max-width: 98px;
+                            }
+                            @include respondsive(sm) {
+                                max-width: 72px;
+                            }
+                        }
+                        &-display {
+                            max-width: 346px;
+                            margin-bottom: 4px;
+                            transition: all 500ms ease;
+
+                            @include respondsive(xl) {
+                                font-size: 1.2em;
+                            }
+                            @include respondsive(sm) {
+                                font-size: 1em;
+                            }
+                        }
+                        &-subtext {
+                            color: $gray;
+                            
+                            @include respondsive(xl) {
+                                font-size: 1em;
+                            }
+                        }
+
+                        .wrapper {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-end;
+
+                            @include respondsive(md) {
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+                        }
+                    }
+                    .btn-outline {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+
+                        .ic-outline {
+                            max-width: 201px;
+                        }
+
+                        @include respondsive(xl) {
+                            .ic-outline {
+                                max-width: 164px;
+                            }
+                        }
+                        @include respondsive(sm) {
+                            .ic-outline {
+                                max-width: 110px;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .btn-outline {
+                            opacity: 1 !important;
+                        }
+                        .card-content {
+                            &-display {
+                                color: #ffb800;
+                            }
+                        }
+                    }
+
+                    @keyframes rotation {
+                        from {
+                            transform: rotate(0deg);
+                        }
+                        to {
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

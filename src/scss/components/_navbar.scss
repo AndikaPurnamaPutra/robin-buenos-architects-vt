@@ -1,0 +1,92 @@
+.navbar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    &-container {
+        @extend .navbar;
+        max-width: 1440px;
+        background-color: #000;
+    }
+    .nav {
+        justify-content: space-between;
+        padding: 24px 64px;
+        position: relative;
+        &-btn-responsive {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: transparent;
+            background-color: transparent;
+            font-family: $font-body;
+            color: $white;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-decoration: underline;
+            @include respondsive(md) {
+                font-size: 16px;
+            }
+            .ic-menu {
+                max-width: 24px;
+            }
+        }
+        &-logo {
+            font-family: $font-body;
+            font-weight: 500;
+            > span {
+                font-weight: 300;
+                color: $light-gray;
+            }
+
+            @include respondsive(md) {
+                font-size: 1.5em !important;
+            }
+        }
+        &-office {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            .ic-global {
+                max-width: 24px;
+            }
+            > a {
+                font-family: $font-body;
+                font-size: 18px;
+                font-weight: 400;
+                color: $light-gray;
+            }
+        }
+        @include respondsive(md) {
+            padding: 18px 36px;
+            &-office {
+                z-index: 99;
+                position: fixed;
+                top: 70px;
+                height: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                background-color: $black;
+                margin: 0 auto;
+                text-align: center;
+                transition: all 300ms ease;
+                opacity: 0;
+
+                &.active {
+                    height: 100vh !important;
+                    opacity: 1 !important;
+                }
+            }
+
+            
+        }
+    }
+}

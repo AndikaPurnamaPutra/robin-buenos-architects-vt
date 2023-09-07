@@ -1,0 +1,103 @@
+.container {
+    &-legacy {
+        padding-block: 60px !important;
+        gap: 44px;
+        .legacy {
+            &-title {
+                .title {
+                    position: relative;
+                    &-content {
+                        &-display {
+                            text-transform: uppercase;
+                            &.display {
+                                &-top {
+                                    color: $dark-gray;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 56px;
+                                }
+
+                                &-right {
+                                    img {
+                                        max-width: 94px;
+                                        margin-bottom: -5px;
+                                    }
+
+                                    @include respondsive(xl) {
+                                        font-size: 4.5em !important;
+                                        img {
+                                            max-width: 72px;
+                                            margin-bottom: -5px;
+                                        }
+                                    }
+                                    @include respondsive(sm) {
+                                        font-size: 2.5em !important;
+                                        img {
+                                            max-width: 40px;
+                                            margin-bottom: -5px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &-paragraph {
+                            max-width: 380px;
+                            &.paragraph {
+                                &-center {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    transform: translate(0%, -50%);
+                                }
+                            }
+                        }
+                        &-image {
+                            margin-left: 93px;
+                            .image {
+                                &-left {
+                                    max-width: 374px;
+
+                                    @include respondsive(xl) {
+                                        max-width: 304px;
+                                    }
+                                }
+                            }
+                        }
+                        &-card {
+                            display: flex;
+                            gap: 84px;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            
+                            @include respondsive(sm) {
+                                gap: 16px;
+                            }
+                            .card {
+                                &-content {
+                                    &-display {
+                                        font-family: $font-body;
+                                        font-weight: 400;
+                                        sup {
+                                            color: #ff5b2c;
+                                        }
+
+                                        @include respondsive(xl) {
+                                            font-size: 4.5em;
+                                        }
+                                        @include respondsive(sm) {
+                                            font-size: 2.5em;
+                                        }
+                                    }
+                                    &-paragraph {
+                                        color: $dark-gray;
+                                        max-width: 140px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
