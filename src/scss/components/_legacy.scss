@@ -1,7 +1,11 @@
 .container {
     &-legacy {
-        padding-block: 60px !important;
+        padding-block: 60px;
         gap: 44px;
+        @include respondsive(md) {
+            gap: 24px;
+            padding-block: 30px;
+        }
         .legacy {
             &-title {
                 .title {
@@ -9,6 +13,13 @@
                     &-content {
                         &-display {
                             text-transform: uppercase;
+                            margin-bottom: 56px;
+                            @include respondsive(md) {
+                                margin-bottom: 36px;
+                            }
+                            @include respondsive(sm) {
+                                margin-bottom: 16px;
+                            }
                             &.display {
                                 &-top {
                                     color: $dark-gray;
@@ -68,9 +79,10 @@
                             gap: 84px;
                             align-items: center;
                             flex-wrap: wrap;
-                            
                             @include respondsive(sm) {
                                 gap: 16px;
+                                flex-direction: column;
+                                align-items: flex-start;
                             }
                             .card {
                                 &-content {
@@ -91,6 +103,9 @@
                                     &-paragraph {
                                         color: $dark-gray;
                                         max-width: 140px;
+                                        @include respondsive(md) {
+                                            max-width: 100%;
+                                        }
                                     }
                                 }
                             }

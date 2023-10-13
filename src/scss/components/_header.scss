@@ -1,10 +1,10 @@
 .container {
     &-header {
-        padding-block: 60px !important;
-        flex-direction: column !important;
+        padding-block: 60px;
+        flex-direction: column;
 
         @include respondsive(md) {
-            padding-block: 30px !important;
+            padding-block: 30px;
         }
         .header {
             &-content {

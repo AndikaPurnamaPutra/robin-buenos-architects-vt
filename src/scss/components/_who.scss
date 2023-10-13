@@ -1,10 +1,10 @@
 .container {
     &-who {
-        padding-block: 60px !important;
+        padding-block: 60px;
         position: relative !important;
 
         @include respondsive(md) {
-            padding-block: 30px !important;
+            padding-block: 30px;
         }
         .who {
             &-title {
