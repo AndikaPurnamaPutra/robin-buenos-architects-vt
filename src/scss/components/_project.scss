@@ -1,6 +1,9 @@
 .section-project {
 	flex-direction: column;
-	max-width: 1440px;
+	align-items: center;
+	justify-content: center;
+	max-width: 2000px;
+	width: 100%;
 	margin: auto;
 	padding-block: 60px; 
 	@include respondsive(md) {
@@ -43,7 +46,6 @@
 			.card {
 				position: relative;
 				flex-shrink: 0;
-				// max-width: 610px;
 				&:first-child {
 					margin-left: 32px;
 					@include respondsive(md) {
@@ -94,7 +96,8 @@
 					&-image {
 						max-width: 126px;
 						animation: rotation 10s infinite linear;
-
+						opacity: 1;
+						transition: all 300ms ease;
 						@include respondsive(xl) {
 							max-width: 98px;
 						}
@@ -157,6 +160,10 @@
 				}
 
 				&:hover {
+					.card-content-image {
+						// max-width: 50px;
+						opacity: 0;
+					}
 					.btn-outline {
 						opacity: 1 !important;
 					}
